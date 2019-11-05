@@ -5,8 +5,8 @@ class QuotesController < ApplicationController
     end
 
     def show
-        quote = Quote.find_by(params[:id])
-        render json: quote
+        @quote = Quote.find_by(id: params[:id])
+        render json: @quote
       end
 
 end
